@@ -49,7 +49,7 @@ CREATE TABLE kafka_source (
 ) WITH (
 	'connector' = 'kafka',
 	'topic' = 'source',
-        'properties.bootstrap.servers' = '127.0.0.1:9092',
+        'properties.bootstrap.servers' = '127.0.0.1:9093',
 	'properties.group.id' = 'test-featurepipelines',
 	'format' = 'json'
 )
@@ -64,7 +64,7 @@ CREATE TABLE kafka_sink (
 ) WITH (
 	'connector' = 'upsert-kafka',
 	'topic' = 'sink',
-        'properties.bootstrap.servers' = '127.0.0.1:9092',
+        'properties.bootstrap.servers' = '127.0.0.1:9093',
 	'properties.group.id' = 'test-featurepipelines',
 	'key.format' = 'json',
 	'value.format' = 'json'
